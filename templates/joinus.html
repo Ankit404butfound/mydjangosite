@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+ {% block body %}
+ 
+ 
+ <div class="container mb-3">
+    <h1 class="text-center" style="color:green;">Application Form For HardCore</h1>
+    <form method="POST" action="/joinus">
+    {% csrf_token %}
+        <div class="form-group">
+            <label for="name"></label>
+            <input type="email" class="form-control" id="name" name="name" placeholder="Enter your Email-id here.">
+        </div>
+
+        <div class="form-group">
+            <label for="username"></label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your Telegram Username here.">
+        </div>
+
+        <div class="form-group">
+            <label for="userid"></label>
+            <input type="phone" class="form-control" id="user_id" name="user_id" placeholder="Enter your Telegram User-Id here.">
+        </div>
+
+        <div class="form-group">
+            <label for="skills"></label>
+            <textarea class="form-control" id="skills" rows="3" name="skills" placeholder="Describe your Skills here."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Apply</button>
+    </form>
+ 
+ <body background = "/static/byn.jpg"
+ {% endblock body %}
+ 
